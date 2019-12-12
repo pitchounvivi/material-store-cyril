@@ -1,0 +1,37 @@
+{% extends 'store/category/_base.html.twig' %}
+
+{% block titleContent %}{{ parent() }} show all{% endblock %}
+
+{% block bodyContent %}
+
+    <h1>Categories</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for category in categories %}
+
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td>{{ category.description }}</td>
+                <td>
+                    <a href="{{ path("store_category_show", {"id": category.id}) }}"> show </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endblock %}
+
+

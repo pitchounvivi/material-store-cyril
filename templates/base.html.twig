@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titleContent %}Material Store{% endblock %}</title>
+
+    {{ encore_entry_link_tags('app_css') }}
+
+</head>
+<body>
+
+{% block header %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Material Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Category</a>
+                <a class="nav-item nav-link" href="#">Product</a>
+                <a class="nav-item nav-link" href="#">Order</a>
+            </div>
+            {% block subHeader %}{% endblock %}
+        </div>
+    </nav>
+{% endblock %}
+
+{% block bodyContent %}{% endblock %}
+
+<footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    </div>
+</footer>
+
+{{ encore_entry_script_tags('app_js') }}
+
+</body>
+</html>

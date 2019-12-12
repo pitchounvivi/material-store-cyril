@@ -1,0 +1,12 @@
+{% extends 'store/category/_base.html.twig' %}
+
+{% block titleContent %}{{ parent() }} edit{% endblock %}
+
+{% block bodyContent %}
+
+    <h1>Category Edit</h1>
+
+    {% include 'store/category/_form.html.twig' %}
+
+{% endblock %}
+
